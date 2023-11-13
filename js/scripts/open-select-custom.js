@@ -1,27 +1,27 @@
 {
-    const btnDropdownSelect = document.getElementById('js-open-select-custom');
-    btnDropdownSelect.addEventListener('click', () => {
-        btnDropdownSelect.parentElement.classList.toggle('active');
-    })
-
-    const bntAllDropdown = document.getElementById('js-dropdown-all');
-    bntAllDropdown.addEventListener("click", filterAll);
-
     axios({
         method: 'GET',
         url: 'https://pokeapi.co/api/v2/type',
     })
     .then((response) => {
         const { results } = response.data;
-
+        
         results.forEach((type, index) => {
             if (index < 18) {
                 createSelectCustom(type.name, index);
             }
         })
     })
+    
+    const btnDropdownSelect = document.getElementById('js-open-select-custom');
+    btnDropdownSelect.addEventListener('click', () => {
+        btnDropdownSelect.parentElement.classList.toggle('active');
+    })
 
     function createSelectCustom(type, index) {
+        const bntAllDropdown = document.getElementById('js-dropdown-all');
+        bntAllDropdown.addEventListener("click", filterAll);
+
         const dropdownSelect = document.getElementById('js-dropdown-select');
 
         let item = document.createElement('li')
