@@ -1,0 +1,9 @@
+.logo {
+    position: absolute;
+    top: 1.69rem;
+    left: 7.07rem;
+    z-index: 2023;
+    @media(max-width: 768px) {
+        left: 2rem;
+    }
+}

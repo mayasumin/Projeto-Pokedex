@@ -1,0 +1,401 @@
+@import './variables';
+@import './mixins';
+
+.s-all-info-pokemon {
+    position: relative;
+    z-index: 2;
+    top: 84rem;
+    .top {
+        @include alignItems;
+        justify-content: space-between;
+        margin-left: 27.3rem;
+        h2 {
+            max-width: 25rem;
+        }
+        .container-search {
+            @include centerTotalFlex;
+            gap: 1rem;
+            background-color: $whiteDefault;
+            max-width: 48rem;
+            padding: 0.6rem;
+            margin-right: 27rem;
+            border: 1px solid transparent;
+            border-radius: 8rem;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: border-color .3s;
+            &:hover, &:focus-within {
+                border-color: $blueDefault;
+                filter: grayscale(0%);
+                opacity: 1;
+            }
+            input {
+                width: 40rem;
+                height: 3rem;
+                font: normal 400 1.5rem/150% $text;
+                color: $lightGray;
+                margin-left: 1rem;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+            button {
+                padding: 0.6rem;
+                background-color: $opacityBlue;
+                border: 1px solid transparent;
+                border-radius: 50%;
+                transition: border-color .3s;
+                &:hover {
+                    border-color: $opacityBlue;
+                }
+            }
+        }
+    }
+    .area-all {
+        display: flex;
+        gap: 8rem;
+        .left-container {
+            flex: 2.5;
+            display: flex;
+            flex-direction: column;
+            padding-top: 18rem;
+            align-items: center;
+            border-right: 1px solid #EFF3F6;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 2.5rem;
+                }
+                button {
+                    @include alignItems;
+                    gap: 1.5rem;
+                    filter: grayscale(100%);
+                    opacity: 0.6;
+                    transition: all .3s;
+                    &:hover, &.active {
+                        filter: grayscale(0%);
+                        opacity: 1;
+                    }
+                    span {
+                        font: normal 500 1.6rem/150% $text;
+                    }
+                }
+            }
+        }
+        .right-container {
+            flex: 5;
+            padding-top: 18rem;
+            .top-container {
+                .number-pokemon {
+                    @include alignItems;
+                    gap: 1rem;
+                    margin-bottom: 4.37rem;
+                    span {
+                        font: normal 600 1.8rem/150% $title;
+                        color: $blackDefault;
+                    }
+                }
+            }
+            .select-custom {
+                display: none;
+            }
+            .all {
+                display: flex;
+                gap: 6rem;
+                margin-bottom: 8rem;
+                flex-wrap: wrap;
+                .card-pokemon {
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    max-width: 26.5rem;
+                    @include centerTotalFlex;
+                    flex-direction: column;
+                    gap: 1.5rem;
+                    padding: 2rem 1.5rem 4rem 1.5rem;
+                    background-color: $whiteDefault;
+                    transition: all .3s;
+                    border-radius: 1rem;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    &:hover {
+                        transform: scale(1.02);
+                        box-shadow: 0px 10px 51px -5px;
+                    }
+                    &.steel {
+                        background: radial-gradient(circle at 50% 0%, $steel 45%, white 45%);
+                    }
+                    &.water {
+                        background: radial-gradient(circle at 50% 0%, $water 45%, white 45%);
+                    }
+                    &.dragon {
+                        background: radial-gradient(circle at 50% 0%, $dragon 45%, white 45%);
+                    }
+                    &.electric {
+                        background: radial-gradient(circle at 50% 0%, $electric 45%, white 45%);
+                    }
+                    &.fairy {
+                        background: radial-gradient(circle at 50% 0%, $fairy 45%, white 45%);
+                    }
+                    &.ghost {
+                        background: radial-gradient(circle at 50% 0%, $ghost 45%, white 45%);
+                    }
+                    &.fire {
+                        background: radial-gradient(circle at 50% 0%, $fire 45%, white 45%);
+                    }
+                    &.ice {
+                        background: radial-gradient(circle at 50% 0%, $ice 45%, white 45%);
+                    }
+                    &.grass {
+                        background: radial-gradient(circle at 50% 0%, $grass 45%, white 45%);
+                    }
+                    &.normal {
+                        background: radial-gradient(circle at 50% 0%, $normal 45%, white 45%);
+                    }
+                    &.bug {
+                        background: radial-gradient(circle at 50% 0%, $bug 45%, white 45%);
+                    }
+                    &.fighting {
+                        background: radial-gradient(circle at 50% 0%, $fighting 45%, white 45%);
+                    }
+                    &.rock {
+                        background: radial-gradient(circle at 50% 0%, $rock 45%, white 45%);
+                    }
+                    &.psychic {
+                        background: radial-gradient(circle at 50% 0%, $psychic 45%, white 45%);
+                    }
+                    &.ground {
+                        background: radial-gradient(circle at 50% 0%, $ground 45%, white 45%);
+                    }
+                    &.dark {
+                        background: radial-gradient(circle at 50% 0%, $dark 45%, white 45%);
+                    }
+                    &.poison {
+                        background: radial-gradient(circle at 50% 0%, $poison 45%, white 45%);
+                    }
+                    &.flying {
+                        background: radial-gradient(circle at 50% 0%, $flying 45%, white 45%);
+                    }
+                    .icon-type {
+                        align-self: flex-end;
+                        img {
+                            background-color: $whiteDefault;
+                            border-radius: 50%;
+                        }
+                    }
+                    .container-pokemon {
+                        @include centerTotalFlex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        .img-pokemon {
+                            position: relative;
+                            @include centerTotalFlex;
+                            margin: auto 0;
+                            img {
+                                width: 16rem;
+                                height: 16rem;
+                            }
+                        }
+                        .info {
+                            @include centerTotalFlex;
+                            flex-direction: column;
+                            gap: .5rem;
+                            h3 {
+                                text-align: center;
+                            }
+                            span {
+                                font: normal 500 1.5rem/150% $text;
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-load-more {
+                display: flex;
+                justify-content: center;
+                button {
+                    padding: 0.88rem 1.25rem;
+                    border-radius: .625rem;
+                    background-color: $opacityBlue;
+                    font: normal 600 1.4rem/normal $title;
+                    letter-spacing: -0.00875rem;
+                    color: $blueDefault;
+                    transition: all .3s;
+                    &:hover {
+                        background-color: $blueDefault;
+                        color: $whiteDefault;
+                    }
+                    &.disabled {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 1200px) {
+        .top {
+            margin-left: 2.5rem;
+            .container-search {
+                margin-right: 2.5rem;
+                max-width: 32.3rem;
+            }
+        }
+        .area-all {
+            .left-container {
+                max-width: 15.9rem;
+                padding-top: 12rem;
+            }
+            .right-container {
+                padding-top: 12.2rem;
+                padding-left: 2.5rem;
+                padding-bottom: 12rem;
+                .top-container {
+                    .number-pokemon {
+                        margin-bottom: 3rem;
+                    }
+                }
+                .all {
+                    gap: 2.5rem;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+        .top {
+            margin: 1rem;
+            margin-bottom: -5rem;
+            .container-search {
+                margin-right: 1rem;
+            }
+        }
+        .area-all {
+            .left-container {
+                display: none;
+            }
+            .right-container {
+                padding-left: 1rem;
+                .select-custom {
+                    display: block;
+                    position: relative;
+                    margin-bottom: 5.5rem;
+                    &.active {
+                        .type-selected {
+                            border-radius: 1rem 1rem 0 0;
+                        }
+                        .dropdown-select {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                    }
+                    .type-selected {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 5.6rem;
+                        border: 1px solid $lightGray;
+                        background: url('../../img/svg/arrow-select.svg') no-repeat right 2.4rem center;
+                        padding: 0 2rem;
+                        border-radius: 1rem;
+                        display: flex;
+                        align-items: center;
+                        transition: all .3s;
+                        span {
+                            color: $gray;
+                            opacity: 0.6;
+                            font-size: 1.4rem;
+                            margin-right: .25rem;
+                        }
+                        strong {
+                            font-size: 1.4rem;
+                            color: $gray;
+                            font-weight: 600;
+                        }
+                    }
+                    .dropdown-select {
+                        position: absolute;
+                        top: 5.5rem;
+                        z-index: 2;
+                        width: 100%;
+                        height: 22.3rem;
+                        border: 1px solid $gray;
+                        border-top: 0;
+                        border-radius: 0 0 1rem 1rem;
+                        background-color: $whiteDefault;
+                        padding: 2.1rem;
+                        overflow-y: auto;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all .3s;
+                        &::-webkit-scrollbar-track {
+                            background-color: transparent;
+                        }
+                        &::-webkit-scrollbar {
+                            width: .2rem;
+                            background-color: transparent;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #3d75c2;
+                            border-radius: .2rem;
+                        }
+                        li {
+                            &:first-child {
+                                button {
+                                    padding-top: 0 
+                                }
+                            }
+                            button {
+                                @include alignItems;
+                                gap: 1.5rem;
+                                padding: 1.2rem;
+                                font: normal 500 1.4rem/150% $text;
+                                &.dropdown-all {
+                                    .icon {
+                                        img {
+                                            width: 2rem;
+                                            height: 2rem;
+                                        }
+                                        margin: 0.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .all {
+                    .card-pokemon {
+                        max-width: 23rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 560px) {
+        .top {
+            display: block;
+            margin-bottom: 2rem;
+            h2 {
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 2rem;
+            }
+            .container-search {
+                margin: 0 auto;
+            }
+        }
+        .area-all {
+            .right-container {
+                .all {
+                    gap: 1rem;
+                    max-width: 50%;
+                    margin: 0 auto;
+                    margin-bottom: 5.8rem;
+                    .card-pokemon {
+                        max-width: 26.5rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
+

@@ -1,0 +1,27 @@
+@import './variables';
+
+h2, h3 {
+    color: $blackDefault;
+}
+
+h1 {
+    font: normal 700 6.4rem/normal $title;
+    letter-spacing: -0.04rem;
+    color: $whiteDefault;
+}
+
+h2 {
+    font: normal 700 3.2rem/normal $title;
+    letter-spacing: -0.02rem;
+}
+
+h3 {
+    font: normal 600 1.8rem/150% $title;
+}
+
+h4 {
+    font: normal 600 1.5rem/normal $text;
+    letter-spacing: -0.00813rem;
+    color: $opacityBlack;
+    margin-bottom: 1.6rem;
+}

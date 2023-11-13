@@ -1,0 +1,232 @@
+@import './variables';
+@import './mixins';
+
+.s-area-slide-hero {
+    position: absolute;
+    width: 100%;
+    height: 99.4rem;
+    .slide-hero {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .swiper-slide {
+            &.blue {
+                .main-area {
+                    background: url('../../img/svg/bg/bg-blue.svg') no-repeat center center;
+                    background-size: cover;
+                    .container {
+                        .text {
+                            .image {
+                                .ball {
+                                    position: relative;
+                                    top: -6.5rem;
+                                    left: 1.3rem;
+    
+                                }
+                            }
+                        }
+                        .area-explorer {
+                            .explorer {
+                                .icon {
+                                    background-color: $lightBlue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &::after {
+                content: '';
+                width: 100%;
+                height: 28.8rem;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
+                background-color: #EFF3F6;
+                pointer-events: none;
+            }
+            .main-area {
+                position: relative;
+                background: url('../../img/svg/bg/bg-red.svg') no-repeat center center;
+                background-size: cover;
+                width: 100%;
+                height: 70.6rem;
+                padding-top: 13.3rem;
+                .container {
+                    position: relative;
+                    height: 100%;
+                    .text {
+                        .tag {
+                            margin: 0 auto;
+                            @include centerTotalFlex();
+                            gap: 0.5rem;
+                            background-color: $whiteDefault;
+                            max-width: 9rem;
+                            padding: 0.25rem 1.12rem 0.25rem 0.37rem;
+                            border-radius: 15rem;
+                            &.blue-tag {
+                                img {
+                                    padding: 0.38rem;
+                                    background-color: $opacityBlue;
+                                    border-radius: 15.25rem;
+                                }
+                                span {
+                                    font: normal 600 0.9375rem/150% $text;
+                                    color: $blueDefault;
+                                }
+                            }
+                            img {
+                                padding: 0.38rem;
+                                background-color: $opacityRed;
+                                border-radius: 15.25rem;
+                            }
+                            span {
+                                font: normal 600 0.9375rem/150% $text;
+                                color: $redDefault;
+                            }
+                        }
+                        h1 {
+                            text-align: center;
+                            margin-top: 2.9rem;
+                            margin-bottom: .5rem;
+                        }
+                        p {
+                            font: normal 500 1.8rem/150% $text;
+                            color: $whiteDefault;
+                            text-align: center;
+                        }
+                        .image {
+                            position: relative;
+                            z-index: 1;
+                            width: 100%;
+                            max-width: 79.8rem;
+                            margin: 0 auto;
+                            margin-top: 18.2rem;
+                            .lights {
+                                position: absolute;
+                                top: -4.9rem;
+                                left: 50%;
+                                margin-left: -8.5rem;
+                            }
+                        }
+                    }
+                    .area-explorer {
+                        position: absolute;
+                        bottom: 8rem;
+                        left: 0;
+                        z-index: 10;
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        .explorer {
+                            top: -3.9rem;
+                            left: 3.5rem;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            transform: rotate(-90deg);
+                            .icon {
+                                width: 4rem;
+                                height: 4rem;
+                                background-color: $lightRed;
+                                border-radius: 50%;
+                                transform: rotate(90deg);
+                                @include centerTotalFlex;
+                            }
+                            span {
+                                font: normal 500 1.3rem/150% $text;
+                                color: $whiteDefault;
+                                margin-left: 3rem;
+                            }
+                        }
+                        .swiper-pagination {
+                            position: relative;
+                            right: 6rem;
+                            .swiper-pagination-bullet {
+                                cursor: pointer;
+                                width: .8rem;
+                                height: .8rem;
+                                background-color: $whiteDefault;
+                                &:not(:first-child) {
+                                    margin-left: .5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 768px) {
+        height: 95.4rem;
+        .slide-hero {
+            .swiper-slide {
+                &:after {
+                    height: 25rem;
+                }
+                .main-area {
+                    .container {
+                        .area-explorer {
+                            .explorer {
+                                display: none;
+                            }
+                        }
+                        .text {
+                            h1 {
+                                max-width: 40rem;
+                                margin: 0 auto;
+                                margin-top: 2.9rem;
+                                margin-bottom: 4rem;
+                            }
+                            .image {
+                                margin-top: 8.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media(max-width: 560px) {
+        overflow: hidden;
+        height: 104.5rem;
+        .slide-hero {
+            .swiper-slide {
+                &.blue {
+                    .main-area {
+                        .container {
+                            .text {
+                                h1 {
+                                    max-width: 25.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .main-area {
+                    padding-top: 12rem;
+                    .container {
+                        .text {
+                            h1 {
+                                font-size: 4.8rem;
+                                line-height: 5.9rem;
+                            }
+                            .image {
+                                @include centerTotalFlex;
+                                img {
+                                    max-width: 72rem;
+                                }
+
+                            }
+                        }
+                    }
+                }
+                &::after {
+                    height: 34rem;
+                }
+            }
+        }
+    }
+}

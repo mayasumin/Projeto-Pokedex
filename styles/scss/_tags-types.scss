@@ -1,0 +1,81 @@
+@import './variables';
+@import './mixins';
+
+.tag-type {
+    display: inline-block;
+    padding: 0.25rem 1.56rem;
+    font: normal 600 1.4rem/normal $title;
+    letter-spacing: -0.0081rem;
+    &.bug {
+        background-color: $opacityBug;
+        color: $bug;
+    }
+    &.dark {
+        background-color: $opacityDark;
+        color: $dark;
+    }
+    &.dragon {
+        background-color: $opacityDragon;
+        color: $dragon;
+    }
+    &.electric {
+        background-color: $opacityElectric;
+        color: $electric;
+    }
+    &.fairy {
+        background-color: $opacityFairy;
+        color: $fairy;
+    }
+    &.fighting {
+        background-color: $opacityFighting;
+        color: $fighting;
+    }
+    &.ground {
+        background-color: $opacityGround;
+        color: $ground;
+    }
+    &.ice {
+        background-color: $opacityIce;
+        color: $ice;
+    }
+    &.normal {
+        background-color: $opacityNormal;
+        color: $normal;
+    }
+    &.poison {
+        background-color: $opacityPoison;
+        color: $poison;
+    }
+    &.psychic {
+        background-color: $opacityPsychic;
+        color: $psychic;
+    }
+    &.rock {
+        background-color: $opacityRock;
+        color: $rock;
+    }
+    &.ghost {
+        background-color: $opacityGhost;
+        color: $ghost;
+    }
+    &.grass {
+        background-color: $opacityGrass;
+        color: $grass;
+    }
+    &.steel {
+        background-color: $opacitySteel;
+        color: $steel;
+    }
+    &.water {
+        background-color: $opacityWater;
+        color: $water;
+    }
+    &.fire {
+        background-color: $opacityFire;
+        color: $fire;
+    }
+    &.flying {
+        background-color: $opacityFlying;
+        color: $flying;
+    }
+}
