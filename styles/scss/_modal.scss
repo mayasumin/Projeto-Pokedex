@@ -316,18 +316,23 @@
         .box {
             max-width: 40em;
             height: 100%;
-            max-height: 76rem;
+            max-height: 70rem;
             flex-direction: column;
             .left-container {
                 max-width: 100%;
                 height: 100%;
                 .pokemon-image {
-                    left: 7rem;
-                    bottom: -11.5rem;
+                    left: 5rem;
+                    bottom: -12rem;
                 }
             }
             .right-container {
-                padding: 8.5rem 5rem 4.9rem 2.5rem;
+                padding: 9.5rem 5rem 4.9rem 2.5rem;
+                .header {
+                    h2 {
+                        font-size: 2.3rem;
+                    }
+                }
             }
 
         }
